@@ -16,9 +16,9 @@ export class Article {
   voteDown(): void {
     this.votes -= 1;
   }
-// domain() is a utility function that extracts
-// the domain from a URL, which we'll explain shortly
 
+  // domain() is a utility function that extracts
+  // the domain from a URL, which we'll explain shortly
   domain(): string {
     try {
       // e.g. http://foo.com/path/to/bar

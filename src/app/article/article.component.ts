@@ -1,5 +1,10 @@
-import { Component, OnInit, Input, HostBinding } from '@angular/core';
-import { Article } from './article.model';
+import {
+  Component,
+  OnInit,
+  Input,        // <-- added,
+  HostBinding
+} from '@angular/core';
+import { Article } from './article.model'; // <-- added
 
 @Component({
   selector: 'app-article',
@@ -11,18 +16,19 @@ export class ArticleComponent implements OnInit {
   @Input() article: Article;
 
   constructor() {
-    //removed since article is populated by the Input now
-   }
+    // article is populated by the Input now,
+    // so we don't need anything here
+  }
 
-   voteUp(): boolean {
-     this.article.votesUp();
-     return false;
-   }
+  voteUp(): boolean {
+    this.article.voteUp();
+    return false;
+  }
 
-   voteDown(): boolean {
-     this.article.voteDown();
-     return false;
-   }
+  voteDown(): boolean {
+    this.article.voteDown();
+    return false;
+  }
 
   ngOnInit() {
   }
